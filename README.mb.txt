@@ -1,0 +1,1 @@
+1 - Scripts checkpoint 2 banco de dados
