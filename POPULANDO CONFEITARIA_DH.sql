@@ -13,22 +13,17 @@ VALUES (DEFAULT, "CARTÃO DE CRÉDITO", "2021-09-10", "2021-09-15" , 4),
 		(DEFAULT, "CARTÃO DE DÉBITO", "2021-09-05", "2021-09-08" , 3), 
 		 (DEFAULT, "PAGSEGURO", "2021-09-08", "2021-09-13" , 2), 
           (DEFAULT, "CARTÃO DE CRÉDITO", "2021-09-01", "2021-09-15" , 5),
-           (DEFAULT, "CARTÃO DE DÉBITO", "2021-09-10", "2021-09-12" , 4);
+           (DEFAULT, "CARTÃO DE DÉBITO", "2021-09-10", "2021-09-12" , 4),
+            (DEFAULT , "PICPAY" , "2021-09-06", "2021-09-12" , 1);
       
- -- INCLUIR MAIS UM CLIENTE EM PEDIDO     
-INSERT INTO PEDIDO
-VALUES (DEFAULT , "PICPAY" , "2021-09-06", "2021-09-12" , 1);
+
 
 INSERT INTO KIT
-VALUES(DEFAULT , "KIT LANCHE", "M", 65.30 , 2),
-		(DEFAULT , "KIT FESTA", "G", 86.80 , 3),
-		  (DEFAULT , "KIT CAFÉ DA MANHÃ", "M", 65.30 , 1),
-		    (DEFAULT , "KIT LANCHE", "P", 55.30 , 4),
-			 (DEFAULT , "KIT LANCHE", "P", 55.30 , 5),
-              (DEFAULT , "KIT FESTA", "M", 65.30 , 6);
+VALUES(DEFAULT , "KIT LANCHE", 65.30 ),
+		(DEFAULT , "KIT FESTA", 86.80 ),
+		  (DEFAULT , "KIT CAFÉ DA MANHÃ", 65.30);
+	
               
-
-
 INSERT INTO PRODUTO
 VALUES(DEFAULT, "TORTA CHOCOLATE", "1" ),
 	   (DEFAULT, "TORTA MARACUJÁ", "1" ),
@@ -43,7 +38,21 @@ VALUES(DEFAULT, "TORTA CHOCOLATE", "1" ),
     (DEFAULT, "BEIJINHO", "10" ),
 	(DEFAULT, "QUEIJO", "100g" ),
 	(DEFAULT, "PRESUNTO", "100g" );
+    
+    INSERT INTO KIT_PRODUTO
+    VALUES (2 , 1) , (2 , 3) , (2 , 9) , (2 , 10) ,(2 , 11),
+		   (1 , 2) , (1 , 3) , (1 , 12) , (1 , 13) ,(1 , 9),
+           (3 , 3) , (3 , 4) , (3 , 5) , (3 , 6) ,(3 , 12);
  
+ INSERT INTO PEDIDO_KIT
+ VALUES(1 , 2) , (1 , 3) ,
+	   (2 , 1) ,
+       (3 , 3) ,
+       (4 , 2) ,
+       (5 , 3) ,
+       (6 , 2) ;
+
+
 INSERT INTO TELEFONE
 VALUES (DEFAULT, "CELULAR", "71 974500384", 1),
 		(DEFAULT, "RESIDENCIAL", "71 43567234", 1),
@@ -53,15 +62,7 @@ VALUES (DEFAULT, "CELULAR", "71 974500384", 1),
             (DEFAULT, "CELULAR", "71 954334628", 4),
              (DEFAULT, "CELULAR", "71 985775093", 5 );
              
-INSERT INTO kit_produto
-VALUES(4 , 1),
-	  (5 , 2),
-      (5 , 3),
-      (2 , 4),
-      (4 , 5),
-      (3 , 6),
-      (3 , 7),
-      (1 , 8);
+
 		
    
 			  
