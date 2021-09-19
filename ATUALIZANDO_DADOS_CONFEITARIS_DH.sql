@@ -1,3 +1,5 @@
+Use confeitaria_ctd;
+
 SELECT * FROM produto;
 
 UPDATE PRODUTO 

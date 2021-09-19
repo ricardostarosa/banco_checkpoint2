@@ -1,3 +1,5 @@
+Use confeitaria_ctd;
+
 CREATE SCHEMA CONFEITARIA_CTD;
 use CONFEITARIA_CTD;
 
